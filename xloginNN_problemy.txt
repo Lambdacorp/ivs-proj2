@@ -1,0 +1,16 @@
+Seznam problému, které dané tým měl + pravděpodobné příčiny a návrhy řešení (Pokud bez problému, pouze návrhy co udělat příště lépe).
+
+Povinně každý 3 problémy či návrhy a ty seřadit od nejdůležitějšího.
+Zaměřit se na tyto oblasti: (napíšeme každý něco jiného, aby to nevypadalo blbě)
+
+xdosli00 = 1
+xdrobn02 = 2
+xillic00 = 3
+xmolit00 = 4
+
+1, 4 - komunikace v týmu (Využili jste vhodné komunikační kanály? Stanovili jste si pravidla a dodržovali je? Komunikovali všichni? ...)
+2, 3 - spolupráce (Dělal každý to, co měl? Bylo možné se dohodnout, nebo si někdo prosazoval svoje za každou cenu? ...)
+1, 3 - vedení týmu (Dělal vedoucí to, co měl? Měl vedoucí autoritu? ...)
+2, 4 - termíny (Naplánovali jste si práci dobře? Začali jste včas? ...)
+1, 2 - aktivita (Byla v týmu nějaká iniciativa, nebo všichni čekali, až někdo něco udělá?)
+3, 4 - nástroje (Zvolili jste vhodné prostředky pro sdílení dat? Zvolili jste vhodné vývojářské nástroje? Měli jste s něčím problémy? ...)
