@@ -1,7 +1,14 @@
 /**
 * @file mainwindow.cpp
-*
+* @version
+* @author
+* @date
+* @author{}
 * @brief
+* @
+* @warning
+* @bug
+* @copyright GNU Public License.
 * @author Lambdacorp
 * In this file there are
 */
@@ -41,11 +48,8 @@ double valueA=0;
 //double valueB=0;
 
 
-bool check_plus=false;
-bool check_minus=false;
-bool check_div=false;
-bool check_nty=false;
-bool check_multiple=false;
+
+char operations='0';
 bool check_bodka=false;// ak sa bodka vymaze ..
 bool check_result=false;
 
@@ -156,13 +160,26 @@ void MainWindow::on_pushButton_bodka_clicked()
         {
             num="0.";
             ui->lcdNumber->display(num);
+
+            if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            {
+                textik="0.";
+            }
+            else
+            {
+                textik.append("0.");
+            }
+
+            ui->label->setText(textik);
         }
         else if( num.length() < 9)
         {
             num= num+".";
             ui->lcdNumber->display(num);
-        }
 
+            textik.append(".");
+            ui->label->setText(textik);
+        }
         check_bodka=true;
     }
 
@@ -177,12 +194,9 @@ void MainWindow::on_pushButton_clear_clicked()
     ui->lcdNumber->display(num);
     valueA=0;
 
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    operations='0';
+    //rez.
+
 }
 
 void MainWindow::on_pushButton_delete_clicked()
@@ -218,62 +232,48 @@ void MainWindow::on_pushButton_delete_clicked()
             ui->label->setText(textik);
         }
     }
+    //TODO
 }
 
 //###########################################
-void MainWindow::aaa() // tODO rename ... case
+void MainWindow::calculating()
 {
-
-
     if(num != "")
     {
+        double helpB=0;
+        helpB=num.toDouble();
+
+        switch( operations )
         {
-            double helpB=0;
-            helpB=num.toDouble();
-
-            if (check_plus)
-            {
+            case '+' :
                 valueA= M.plus(valueA, helpB);
-
                 check_and_print(valueA);
-
-            }
-
-            if (check_minus)
-            {
+                break;
+            case '-' :
                 valueA= M.minus(valueA, helpB);
-
                 check_and_print(valueA);
-            }
-
-            if (check_div)
-            {
+                break;
+            case '/' :
                 valueA= M.div(valueA,helpB);
-
                 check_and_print(valueA);
-            }
-
-            if (check_multiple)
-            {
+                break;
+            case '*' :
                 valueA=M.multiple(valueA,helpB);
-
                 check_and_print(valueA);
-            }
+                break;
 
-            if (check_nty)
-            {
+            case '^' :
                 valueA=M.n_power(valueA,helpB);
-
                 check_and_print(valueA);
-            }
+                break;
+
+            default:
+                break;
         }
-
-
         valueA=num.toDouble();
         num="";
     }
 }
-
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
     check_result=true;
@@ -285,6 +285,7 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
         textik.append(num);
         ui->label->setText(textik);
         textik=num;
+
     }
     else
     {
@@ -295,18 +296,20 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
     }
 }
 
-void MainWindow::on_pushButton_plus_clicked() //ok TODO
+void MainWindow::print_help_text(char sign)
 {
-                                         //############################################
-    if(!check_result)
-    {
-        QString znamienko=" + ";
+    //if(!check_result)
+
+        QString znamienko="  ";
+        znamienko.insert(1,sign);
+
         int help=textik.length();
-        if ( help==0)
-            textik.append("0");
+
+        //if ( help==0)
+          //  textik.append("0");
         if ( textik[help-1] == ' ')
         {
-            textik.replace(help-3,3,znamienko);
+            textik.replace(help-2,1,sign);
             ui->label->setText(textik);
         }
         else
@@ -314,43 +317,23 @@ void MainWindow::on_pushButton_plus_clicked() //ok TODO
             textik.append(znamienko);
             ui->label->setText(textik);
         }
-    }
 
-    aaa();
-
-    check_plus=true;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+}
+void MainWindow::on_pushButton_plus_clicked() //ok TODO
+{
+    calculating();
+    operations='+';
+    print_help_text(operations);
     check_result=false;
 }
 
 
 void MainWindow::on_pushButton_minus_clicked()//ok
 {
-    aaa();
-
-    QString znamienko=" - ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=true;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    calculating();
+    operations='-';
+    print_help_text(operations);
+    check_result=false;
     check_result=false;
 }
 
@@ -358,68 +341,30 @@ void MainWindow::on_pushButton_minus_clicked()//ok
 
 void MainWindow::on_pushButton_div_clicked()//ok
 {
-    aaa();
-
-    QString znamienko=" / ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=true;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    calculating();
+    operations='/';
+    print_help_text(operations);
+    check_result=false;
     check_result=false;
 }
 
 void MainWindow::on_pushButton_multiple_clicked()//ok
 {
-    aaa();
-    QString znamienko=" * ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=true;
+    calculating();
+    operations='*';
+    print_help_text(operations);
+    check_result=false;
     check_result=false;
 }
 
 
 void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
-    aaa();
+    calculating();
 
     num="";
 
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    operations='=';
     check_result=false;
 }
 
@@ -428,8 +373,7 @@ void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 
 void MainWindow::on_pushButton_power_clicked() //ok
 {
-//    aaa();
-
+    calculating();
     double helpB=0;
 
     if (num == "")
@@ -465,7 +409,7 @@ void MainWindow::on_pushButton_power_clicked() //ok
 
 void MainWindow::on_pushButton_sqrtt_clicked()
 {
-//    aaa();
+    calculating();
 
     double helpB=0;
     if (num == "")
@@ -490,7 +434,7 @@ void MainWindow::on_pushButton_factorial_clicked()//ok
 {
     double helpB=0;
 
-//    aaa();
+    calculating();
 
     if (num == "" )
     {
@@ -520,27 +464,11 @@ void MainWindow::on_pushButton_factorial_clicked()//ok
 
 void MainWindow::on_pushButton_nty_clicked()//ok
 {
-    aaa();
+    calculating();
 
-    QString znamienko=" ^";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=true;
-    check_multiple=false;
+    calculating();
+    operations='^';
+    print_help_text(operations);
     check_result=false;
 
 }
