@@ -37,59 +37,103 @@ bool check_div=false;
 bool check_nty=false;
 bool check_multiple=false;
 bool check_bodka=false;// ak sa bodka vymaze ..
+bool check_result=false;
+
+QString textik = "0";
 
 matematics M;
 
 
+void MainWindow::check_input_zero()
+{
+    if (num == "0")
+    {
+        num="";
+        if(textik.length()>4)
+        {
+            if(textik.at(textik.length()-2)==' ')
+            {
+                textik.remove(textik.length()-1,1);
+            }
+        }
+    }
+    if(textik=="0")
+    {
+        textik="";
+    }
+}
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    if (num == "0")
-        num="";
+    check_input_zero();
 
     if( num.length() <= 9)
     {
         num= num+"1";
         ui->lcdNumber->display(num);
 
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("1");
+        ui->label->setText(textik);
+
     }
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    if (num == "0")
-        num="";
+    check_input_zero();
 
     if( num.length() <= 9)
     {
         num= num+"2";
         ui->lcdNumber->display(num);
 
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("2");
+        ui->label->setText(textik);
+
     }
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    if (num == "0")
-        num="";
+    check_input_zero();
 
     if( num.length() <= 9)
     {
         num= num+"3";
         ui->lcdNumber->display(num);
 
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("3");
+        ui->label->setText(textik);
+
     }
+
 }
+
 
 void MainWindow::on_pushButton_0_clicked()
 {
-    if (num == "0")
-        num="";
+    check_input_zero();
 
-    else if( num.length() <= 9)
+
+    if( num.length() <= 9)
     {
         num= num+"0";
         ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("0");
+        ui->label->setText(textik);
 
     }
 }
@@ -118,6 +162,8 @@ void MainWindow::on_pushButton_bodka_clicked()
 void MainWindow::on_pushButton_clear_clicked()
 {
     num="0";
+    textik="0";
+    ui->label->setText(textik);
     ui->lcdNumber->display(num);
     valueA=0;
 
@@ -132,10 +178,16 @@ void MainWindow::on_pushButton_clear_clicked()
 void MainWindow::on_pushButton_delete_clicked()
 {
     int index= num.length()-1;
+
+
     if (index<=0)
     {
         num="0";
         ui->lcdNumber->display(num);
+        textik.remove(textik.length()-1,1);
+        textik.append("0");
+        ui->label->setText(textik);
+
     }
     else
     {
@@ -144,6 +196,17 @@ void MainWindow::on_pushButton_delete_clicked()
 
         num=num.remove(index,1);
         ui->lcdNumber->display(num);
+
+        if (textik.length()== index+1 || textik.length()== index+4)
+        {
+            textik.remove(index,1);
+            ui->label->setText(textik);
+        }
+        else
+        {
+            textik.remove(textik.length()-1,1);
+            ui->label->setText(textik);
+        }
     }
 }
 
@@ -203,20 +266,46 @@ void MainWindow::aaa() // tODO rename ... case
 
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
+    check_result=true;
     if( !std::isnan(A) && !std::isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
+        textik.append(" = ");
+        textik.append(num);
+        ui->label->setText(textik);
+        textik=num;
     }
     else
     {
         ui->lcdNumber->display("Err");
         valueA=0;
+        ui->label->setText("Err");
+        textik="";
     }
 }
 
-void MainWindow::on_pushButton_plus_clicked() // TODO
+void MainWindow::on_pushButton_plus_clicked() //ok TODO
 {
+                                         //############################################
+    if(!check_result)
+    {
+        QString znamienko=" + ";
+        int help=textik.length();
+        if ( help==0)
+            textik.append("0");
+        if ( textik[help-1] == ' ')
+        {
+            textik.replace(help-3,3,znamienko);
+            ui->label->setText(textik);
+        }
+        else
+        {
+            textik.append(znamienko);
+            ui->label->setText(textik);
+        }
+    }
+
     aaa();
 
     check_plus=true;
@@ -225,12 +314,26 @@ void MainWindow::on_pushButton_plus_clicked() // TODO
     check_bodka=false;
     check_nty=false;
     check_multiple=false;
+    check_result=false;
 }
 
 
-void MainWindow::on_pushButton_minus_clicked()
+void MainWindow::on_pushButton_minus_clicked()//ok
 {
     aaa();
+
+    QString znamienko=" - ";
+    int help=textik.length();
+    if (textik[help-1] == ' ')
+    {
+        textik.replace(help-3,3,znamienko);
+        ui->label->setText(textik);
+    }
+    else
+    {
+        textik.append(znamienko);
+        ui->label->setText(textik);
+    }
 
     check_plus=false;
     check_minus=true;
@@ -238,13 +341,27 @@ void MainWindow::on_pushButton_minus_clicked()
     check_bodka=false;
     check_nty=false;
     check_multiple=false;
+    check_result=false;
 }
 
 
 
-void MainWindow::on_pushButton_div_clicked()
+void MainWindow::on_pushButton_div_clicked()//ok
 {
     aaa();
+
+    QString znamienko=" / ";
+    int help=textik.length();
+    if (textik[help-1] == ' ')
+    {
+        textik.replace(help-3,3,znamienko);
+        ui->label->setText(textik);
+    }
+    else
+    {
+        textik.append(znamienko);
+        ui->label->setText(textik);
+    }
 
     check_plus=false;
     check_minus=false;
@@ -252,12 +369,24 @@ void MainWindow::on_pushButton_div_clicked()
     check_bodka=false;
     check_nty=false;
     check_multiple=false;
-
+    check_result=false;
 }
 
-void MainWindow::on_pushButton_multiple_clicked()
+void MainWindow::on_pushButton_multiple_clicked()//ok
 {
     aaa();
+    QString znamienko=" * ";
+    int help=textik.length();
+    if (textik[help-1] == ' ')
+    {
+        textik.replace(help-3,3,znamienko);
+        ui->label->setText(textik);
+    }
+    else
+    {
+        textik.append(znamienko);
+        ui->label->setText(textik);
+    }
 
     check_plus=false;
     check_minus=false;
@@ -265,41 +394,56 @@ void MainWindow::on_pushButton_multiple_clicked()
     check_bodka=false;
     check_nty=false;
     check_multiple=true;
+    check_result=false;
 }
 
 
 void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
     aaa();
+
     num="";
+
     check_plus=false;
     check_minus=false;
     check_div=false;
     check_bodka=false;
     check_nty=false;
     check_multiple=false;
+    check_result=false;
 }
 
 
 
 
-void MainWindow::on_pushButton_power_clicked()
+void MainWindow::on_pushButton_power_clicked() //ok
 {
 //    aaa();
+
     double helpB=0;
+
     if (num == "")
     {
-            valueA= M.power(valueA);
+        textik=QString("%1").arg(valueA, 0, 'g', 10);
+        textik.append(" ^2");
 
-            check_and_print(valueA);
+        valueA= M.power(valueA);
+
+        check_and_print(valueA);
     }
     else
     {
         helpB=num.toDouble();
+
+        textik=QString("%1").arg(helpB, 0, 'g', 10);
+        textik.append(" ^2");
+
         valueA= M.power(helpB);
 
         check_and_print(valueA);
     }
+
+
 
     num="";
     check_bodka=false;
@@ -332,7 +476,7 @@ void MainWindow::on_pushButton_sqrtt_clicked()
     check_bodka=false;
 }
 
-void MainWindow::on_pushButton_factorial_clicked()
+void MainWindow::on_pushButton_factorial_clicked()//ok
 {
     double helpB=0;
 
@@ -340,6 +484,9 @@ void MainWindow::on_pushButton_factorial_clicked()
 
     if (num == "" )
     {
+        textik=QString("%1").arg(valueA, 0, 'g', 10);
+        textik.append(" !");
+
         valueA=M.fact(valueA);
 
         check_and_print(valueA);
@@ -347,6 +494,9 @@ void MainWindow::on_pushButton_factorial_clicked()
     else
     {
         helpB=num.toDouble();
+
+        textik=QString("%1").arg(helpB, 0, 'g', 10);
+        textik.append(" !");
         valueA=M.fact(helpB);
 
         check_and_print(valueA);
@@ -358,9 +508,22 @@ void MainWindow::on_pushButton_factorial_clicked()
 
 
 
-void MainWindow::on_pushButton_nty_clicked()
+void MainWindow::on_pushButton_nty_clicked()//ok
 {
     aaa();
+
+    QString znamienko=" ^";
+    int help=textik.length();
+    if (textik[help-1] == ' ')
+    {
+        textik.replace(help-3,3,znamienko);
+        ui->label->setText(textik);
+    }
+    else
+    {
+        textik.append(znamienko);
+        ui->label->setText(textik);
+    }
 
     check_plus=false;
     check_minus=false;
@@ -368,6 +531,7 @@ void MainWindow::on_pushButton_nty_clicked()
     check_bodka=false;
     check_nty=true;
     check_multiple=false;
+    check_result=false;
 
 }
 

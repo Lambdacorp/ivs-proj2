@@ -15,6 +15,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void aaa();
     void check_and_print(double A);
+    void check_input_zero();
     ~MainWindow();
 
 
