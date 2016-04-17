@@ -5,5 +5,7 @@
         <file>help.png</file>
         <file>info.png</file>
         <file>lambdacorp.png</file>
+        <file>color.png</file>
+        <file>cze.png</file>
     </qresource>
 </RCC>

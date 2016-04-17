@@ -1564,7 +1564,7 @@ background-color: transparent;
 color: rgb(206, 206, 206);</string>
     </property>
     <property name="title">
-     <string>Lambdacorp</string>
+     <string>Menu</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>true</bool>
@@ -1594,10 +1594,18 @@ color: rgb(206, 206, 206);</string>
      <property name="title">
       <string>Barvené schéma</string>
      </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/color.png</normaloff>:/new/prefix1/color.png</iconset>
+     </property>
     </widget>
     <widget class="QMenu" name="setting_jazyk">
      <property name="title">
       <string>Jazyk</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/cze.png</normaloff>:/new/prefix1/cze.png</iconset>
      </property>
      <addaction name="actionAngli_tina"/>
      <addaction name="action_e_tina"/>
