@@ -1,0 +1,7 @@
+Zde musíme napsat počet bodů (X) 0-5 za projekt (dle aktivity a přínosu k projektu -> 0 = 0 celkově). Body musí odsouhlasit všichni členové týmu.
+Odevzdat pouze ve formátu:
+
+xdosli00 X (skutečně řešená část projektu)
+xdrobn02 X (skutečně řešená část projektu)
+xillic00 X (obhajoba projektu, )
+xmolit00 X (skutečně řešená část projektu)

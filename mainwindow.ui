@@ -1,0 +1,1712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>301</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>271</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:0px;
+color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="smallDecimalPoint">
+     <bool>false</bool>
+    </property>
+    <property name="digitCount">
+     <number>12</number>
+    </property>
+    <property name="mode">
+     <enum>QLCDNumber::Dec</enum>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Filled</enum>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>110</y>
+      <width>301</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(2, 2, 2);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>90</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Bin</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_delete">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));
+ }</string>
+     </property>
+     <property name="text">
+      <string>DEL</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clear">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>30</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));
+ }</string>
+     </property>
+     <property name="text">
+      <string>C</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>16</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(13, 13, 13);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_bodka">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>240</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>,</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>56</green>
+           <blue>16</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Light">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>255</red>
+           <green>255</green>
+           <blue>255</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Text">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>230</red>
+           <green>230</green>
+           <blue>230</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="0.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="255">
+             <red>0</red>
+             <green>0</green>
+             <blue>0</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.857955000000000">
+            <color alpha="255">
+             <red>15</red>
+             <green>15</green>
+             <blue>15</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="shortcut">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>60</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_power">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>180</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>^2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>60</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>9</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_nty">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>^n</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>70</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Dec</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_plus">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>60</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_result">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>240</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(255, 236, 16), stop:0.857955 rgb(255, 255, 0));
+  color: rgb(0, 0, 0);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(234, 216, 14), stop:0.857955 rgb(245, 245, 0));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(216, 199, 13), stop:0.857955 rgb(245, 245, 0));
+ }</string>
+     </property>
+     <property name="text">
+      <string>=</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_0">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>240</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>180</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_multiple">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>0</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>2</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gill Sans MT</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>*</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_div">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>/</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_minus">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>180</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_sqrtt">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>0</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>sqrt √</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_factorial">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(15, 15, 15));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(25, 25, 25));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(0, 0, 0), stop:0.857955 rgb(60, 60, 60));
+ }</string>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_not">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>180</y>
+       <width>61</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+  border: 1px solid rgb(22, 22, 22);
+  font: 12pt &quot;Gill Sans MT&quot;;	
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));
+  color: rgb(230, 230, 230);
+}
+
+QPushButton:hover
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));
+}
+
+QPushButton:pressed 
+{
+  border: 1px solid rgb(22, 22, 22);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));
+ }</string>
+     </property>
+     <property name="text">
+      <string>+ / -</string>
+     </property>
+    </widget>
+    <zorder>radioButton_2</zorder>
+    <zorder>pushButton_delete</zorder>
+    <zorder>pushButton_clear</zorder>
+    <zorder>frame_4</zorder>
+    <zorder>pushButton_bodka</zorder>
+    <zorder>pushButton_1</zorder>
+    <zorder>pushButton_8</zorder>
+    <zorder>pushButton_9</zorder>
+    <zorder>radioButton</zorder>
+    <zorder>pushButton_result</zorder>
+    <zorder>pushButton_0</zorder>
+    <zorder>pushButton_2</zorder>
+    <zorder>pushButton_6</zorder>
+    <zorder>pushButton_3</zorder>
+    <zorder>pushButton_7</zorder>
+    <zorder>pushButton_5</zorder>
+    <zorder>pushButton_4</zorder>
+    <zorder>pushButton_plus</zorder>
+    <zorder>pushButton_minus</zorder>
+    <zorder>pushButton_nty</zorder>
+    <zorder>pushButton_not</zorder>
+    <zorder>pushButton_power</zorder>
+    <zorder>pushButton_multiple</zorder>
+    <zorder>pushButton_div</zorder>
+    <zorder>pushButton_sqrtt</zorder>
+    <zorder>pushButton_factorial</zorder>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>79</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(13, 13, 13);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+color: rgb(74, 74, 74);
+  font: 12pt &quot;Gill Sans MT&quot;;	</string>
+     </property>
+     <property name="text">
+      <string>Paměť:    25 + 16 * 2... //$num</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>16</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(95, 95, 95);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>301</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>16</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(13, 13, 13);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </widget>
+   <zorder>frame_3</zorder>
+   <zorder>lcdNumber</zorder>
+   <zorder>frame</zorder>
+   <zorder>frame_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>301</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+
+background-color: rgb(95,95,95);
+	color: rgb(206, 206, 206);
+}
+QMenuBar::item {
+
+background-color: transparent;
+
+
+}</string>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="Lambdacorp">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(95, 95, 95);
+color: rgb(206, 206, 206);</string>
+    </property>
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>true</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionTextiik"/>
+    <addaction name="actionN_pov_da"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="exit"/>
+    <addaction name="action_C_Lambacorp"/>
+   </widget>
+   <widget class="QMenu" name="setting">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(95, 95, 95);
+color: rgb(206, 206, 206);</string>
+    </property>
+    <property name="title">
+     <string>Nastavení</string>
+    </property>
+    <widget class="QMenu" name="setting_set">
+     <property name="title">
+      <string>Barvené schéma</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/color.png</normaloff>:/new/prefix1/color.png</iconset>
+     </property>
+    </widget>
+    <widget class="QMenu" name="setting_jazyk">
+     <property name="title">
+      <string>Jazyk</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/cze.png</normaloff>:/new/prefix1/cze.png</iconset>
+     </property>
+     <addaction name="actionAngli_tina"/>
+     <addaction name="action_e_tina"/>
+     <addaction name="actionSloven_ina"/>
+    </widget>
+    <addaction name="setting_set"/>
+    <addaction name="setting_jazyk"/>
+   </widget>
+   <addaction name="Lambdacorp"/>
+   <addaction name="setting"/>
+  </widget>
+  <action name="actionBuy_full_version">
+   <property name="text">
+    <string>Buy full version</string>
+   </property>
+  </action>
+  <action name="actionTextiik">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/info.png</normaloff>:/new/prefix1/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>O kalkulačce</string>
+   </property>
+  </action>
+  <action name="action_e_tina">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Čeština</string>
+   </property>
+  </action>
+  <action name="actionSloven_ina">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Slovenčina</string>
+   </property>
+  </action>
+  <action name="actionAngli_tina">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Angličtina</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/exit.png</normaloff>:/new/prefix1/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ukončit</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukončí program&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionN_pov_da">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/help.png</normaloff>:/new/prefix1/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nápověda</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="action_C_Lambacorp">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/lambdacorp.png</normaloff>:/new/prefix1/lambdacorp.png</iconset>
+   </property>
+   <property name="text">
+    <string>By Lambdacorp</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

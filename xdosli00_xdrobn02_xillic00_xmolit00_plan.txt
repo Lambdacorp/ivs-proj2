@@ -1,0 +1,51 @@
+Lambdacorp
+
+Stanovené termíny a přidělení dílčích úkolů jednotlivým řešitelům
+
+Do 13. 3.
+Vypsat jednotlivé podúkoly a vytvořit prvotní grafický návrh - Došlík Tomáš
+
+Do 21. 3.
+Vytvořit plán projektu a odevzdat jej do WIS - Illichmann David
+
+Do 27. 3.
+Zvolit přidanou funkci, kterou kalkulačka bude obsahovat - zodpovědnost Illichmann David
+
+Do 3. 4.
+Vytvořit testy pro matematickou knihovnu - Drobňák David
+
+Do 10. 4.
+Hotová matematická knihovna - Molitoris Miloš
+Hotová funkce main() - Drobňák David
+
+Do 17. 4.
+Zdokumentovat profiling - Drobňák David
+Hotový (un)Instalátor - Illichmann David
+Hotová uživatelská dokumentace - Molitoris Miloš
+Hotové grafické uživatelské rozhraní - Došlík Tomáš
+
+Do 21. 4. 
+Vytvořit Doxyfile - každý člen týmu nezávisle, porovná se na nejbližší schůzi
+Vytvořit snímek z debuggingu - Drobňák Dávid (předpokládá se, že práci s debuggingem si vyzkouší každý)
+
+Do 22. 4.
+Vytvořit (2-3) MockUpy - společná práce na schůzi v tomto týdnu, zodpovědnost - Tomáš Došlík
+Osobní hodnocení členů v souboru body.txt  - spolecná práce na schůzi v tomto týdnu, zodpovědnost - David Illichmann
+Informace o rozdíle mezi plánem a skutečností v souboru skutecnost.txt - David Illichmann
+Odevzdat vše do IS FIT - David Illichmann
+
+
+Komunikační kanály a stanovená pravidla pro komunikaci
+Na první schůzce naší skupiny jsme se dohodli využívat tyto komunikační prostředky:
+1) Primárně vše řešit ve skupině na sociální síti Facebook (z důvodu zachování historie a vláknování diskuze)
+2) Triviální a méně podstatné záležitosti diskutovat v chatu sociální sítě Facebook
+3) Všichni členové si vyměnili telefonní čísla
+
+Dále byla zavedena tato komunikační pravidla:
+Pokud člen skupiny ví, že bude po následujících 48 hodin neaktivní na sociální síti Facebook, měl by tuto skutečnost ohlásit ve skupině, aby se předešlo případným nedorozuměním.  
+Telefonní čísla budeme využívat pouze v krajních případech, kdy člen nereaguje na zprávy všech členů skupiny.
+
+
+Systém pro správu verzí
+Po vzájemné shodě se všichni členové shodli využívat Git jakožto systém pro správu verzí.
+
