@@ -177,25 +177,6 @@ color: rgb(255, 255, 255);
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QRadioButton" name="radioButton_2">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>90</y>
-       <width>41</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"/>
-     </property>
-     <property name="text">
-      <string>Bin</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_delete">
      <property name="geometry">
       <rect>
@@ -813,7 +794,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>70</y>
+       <y>80</y>
        <width>41</width>
        <height>21</height>
       </rect>
@@ -1401,7 +1382,6 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
       <string>+ / -</string>
      </property>
     </widget>
-    <zorder>radioButton_2</zorder>
     <zorder>pushButton_delete</zorder>
     <zorder>pushButton_clear</zorder>
     <zorder>frame_4</zorder>
@@ -1461,7 +1441,7 @@ color: rgb(74, 74, 74);
   font: 12pt &quot;Gill Sans MT&quot;;	</string>
      </property>
      <property name="text">
-      <string>Paměť:    25 + 16 * 2... //$num</string>
+      <string>Paměť</string>
      </property>
     </widget>
     <widget class="QFrame" name="frame_5">
@@ -1564,7 +1544,7 @@ background-color: transparent;
 color: rgb(206, 206, 206);</string>
     </property>
     <property name="title">
-     <string>Lambdacorp</string>
+     <string>Menu</string>
     </property>
     <property name="separatorsCollapsible">
      <bool>true</bool>
@@ -1594,14 +1574,23 @@ color: rgb(206, 206, 206);</string>
      <property name="title">
       <string>Barvené schéma</string>
      </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/color.png</normaloff>:/new/prefix1/color.png</iconset>
+     </property>
+     <addaction name="actionOriginal"/>
+     <addaction name="actionBlack_and_white"/>
     </widget>
     <widget class="QMenu" name="setting_jazyk">
      <property name="title">
       <string>Jazyk</string>
      </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/new/prefix1/cze.png</normaloff>:/new/prefix1/cze.png</iconset>
+     </property>
      <addaction name="actionAngli_tina"/>
      <addaction name="action_e_tina"/>
-     <addaction name="actionSloven_ina"/>
     </widget>
     <addaction name="setting_set"/>
     <addaction name="setting_jazyk"/>
@@ -1620,6 +1609,12 @@ color: rgb(206, 206, 206);</string>
      <normaloff>:/new/prefix1/info.png</normaloff>:/new/prefix1/info.png</iconset>
    </property>
    <property name="text">
+    <string>O kalkulačce</string>
+   </property>
+   <property name="iconText">
+    <string>O kalkulačce</string>
+   </property>
+   <property name="toolTip">
     <string>O kalkulačce</string>
    </property>
   </action>
@@ -1647,7 +1642,7 @@ color: rgb(206, 206, 206);</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Angličtina</string>
+    <string>English</string>
    </property>
    <property name="visible">
     <bool>true</bool>
@@ -1693,6 +1688,25 @@ color: rgb(206, 206, 206);</string>
    </property>
    <property name="text">
     <string>By Lambdacorp</string>
+   </property>
+  </action>
+  <action name="actionOriginal">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tmavé</string>
+   </property>
+  </action>
+  <action name="actionBlack_and_white">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Světlé</string>
    </property>
   </action>
  </widget>

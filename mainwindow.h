@@ -1,3 +1,11 @@
+/**
+* @file mainwindow.h
+*
+* @brief Header file for main window
+* @author Lambdacorp
+* In this file there are
+*/
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -65,6 +73,18 @@ private slots:
     void on_pushButton_not_clicked();
 
     void on_pushButton_multiple_clicked();
+
+    void on_actionBlack_and_white_triggered();
+
+    void on_actionOriginal_triggered();
+
+    void on_action_e_tina_triggered();
+
+    void on_actionAngli_tina_triggered();
+
+    void on_actionTextiik_triggered();
+
+    void on_actionN_pov_da_triggered();
 
 private:
     Ui::MainWindow *ui;
