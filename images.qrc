@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/new/prefix1">
-        <file>ext.png</file>
         <file>exit.png</file>
         <file>help.png</file>
         <file>info.png</file>
