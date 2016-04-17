@@ -14,11 +14,20 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    matematics.cpp
+    matematics.cpp \
+    about.cpp \
+    helpwindow.cpp \
+    help.cpp
 
 HEADERS  += mainwindow.h \
-    matematics.h
+    matematics.h \
+    about.h \
+    helpwindow.h \
+    help.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    about.ui \
+    helpwindow.ui \
+    help.ui
 
 RESOURCES += images.qrc
