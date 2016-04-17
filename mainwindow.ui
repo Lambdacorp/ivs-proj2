@@ -1483,51 +1483,6 @@ color: rgb(74, 74, 74);
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_help">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>0</y>
-       <width>20</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton
-{
-
- font: 9pt;
- color: white;
- background-color: blue;
- border-color: white;
- border-style: solid;
- border-width:1px;
- border-radius:10px;
-
-}
-
-QPushButton:hover
-{
- background-color: white;
- border-color: blue;
- color: blue;
-}
-
-QPushButton:pressed 
-{
- background-color: white;
- border-color: blue;
- color: blue;
- }</string>
-     </property>
-     <property name="text">
-      <string>?</string>
-     </property>
-    </widget>
-    <zorder>label</zorder>
-    <zorder>frame_5</zorder>
-    <zorder>lcdNumber</zorder>
-    <zorder>pushButton_help</zorder>
    </widget>
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
@@ -1566,11 +1521,6 @@ QPushButton:pressed
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <zorder>frame_6</zorder>
-    <zorder>lcdNumber</zorder>
-    <zorder>lcdNumber</zorder>
-    <zorder>lcdNumber</zorder>
-    <zorder>lcdNumber</zorder>
    </widget>
    <zorder>frame_3</zorder>
    <zorder>lcdNumber</zorder>
@@ -1589,6 +1539,19 @@ QPushButton:pressed
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+
+background-color: rgb(95,95,95);
+	color: rgb(206, 206, 206);
+}
+QMenuBar::item {
+
+background-color: transparent;
+
+
+}</string>
+   </property>
    <property name="defaultUp">
     <bool>false</bool>
    </property>
@@ -1596,6 +1559,10 @@ QPushButton:pressed
     <bool>false</bool>
    </property>
    <widget class="QMenu" name="Lambdacorp">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(95, 95, 95);
+color: rgb(206, 206, 206);</string>
+    </property>
     <property name="title">
      <string>Lambdacorp</string>
     </property>
@@ -1608,19 +1575,24 @@ QPushButton:pressed
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionTextiik"/>
-    <addaction name="actionBuy_full_version"/>
+    <addaction name="actionN_pov_da"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="exit"/>
+    <addaction name="action_C_Lambacorp"/>
    </widget>
    <widget class="QMenu" name="setting">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(95, 95, 95);
+color: rgb(206, 206, 206);</string>
+    </property>
     <property name="title">
-     <string>Settings</string>
+     <string>Nastavení</string>
     </property>
     <widget class="QMenu" name="setting_set">
      <property name="title">
-      <string>Set</string>
+      <string>Barvené schéma</string>
      </property>
     </widget>
     <widget class="QMenu" name="setting_jazyk">
@@ -1643,8 +1615,12 @@ QPushButton:pressed
    </property>
   </action>
   <action name="actionTextiik">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/info.png</normaloff>:/new/prefix1/info.png</iconset>
+   </property>
    <property name="text">
-    <string>Info</string>
+    <string>O kalkulačce</string>
    </property>
   </action>
   <action name="action_e_tina">
@@ -1683,16 +1659,40 @@ QPushButton:pressed
   <action name="exit">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/new/prefix1/ext.png</normaloff>:/new/prefix1/ext.png</iconset>
+     <normaloff>:/new/prefix1/exit.png</normaloff>:/new/prefix1/exit.png</iconset>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Ukončit</string>
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukončí program&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionN_pov_da">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/help.png</normaloff>:/new/prefix1/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nápověda</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="action_C_Lambacorp">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/new/prefix1/lambdacorp.png</normaloff>:/new/prefix1/lambdacorp.png</iconset>
+   </property>
+   <property name="text">
+    <string>By Lambdacorp</string>
    </property>
   </action>
  </widget>
