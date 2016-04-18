@@ -131,6 +131,113 @@ void MainWindow::on_pushButton_3_clicked()
 
 }
 
+void MainWindow::on_pushButton_4_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"4";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("4");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"5";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("5");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"6";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("6");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"7";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("7");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"8";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("8");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"9";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("9");
+        ui->label->setText(textik);
+
+    }
+}
 
 void MainWindow::on_pushButton_0_clicked()
 {
@@ -284,6 +391,8 @@ void MainWindow::calculating()
 }
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
+    check_result=true;
+    if( !std::isnan(A) && !std::isinf(A) )
     check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
     if( !std::isnan(A) && !std::isinf(A) )
     {
@@ -293,7 +402,6 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
         textik.append(num);                                                          // optimalizovat ked bude cas
         ui->label->setText(textik);
         textik=num;
-
     }
     else
     {
@@ -642,7 +750,7 @@ void MainWindow::on_actionOriginal_triggered()
 void MainWindow::on_action_e_tina_triggered()
 {
     ui->actionAngli_tina->setChecked(false);
-    ui->label->setText("Paměť");
+    ui->label->setText("Průběh výpočtu");
     ui->actionN_pov_da->setText("Nápověda");
     ui->actionTextiik->setText("O kalkulačce");
     ui->exit->setText("Ukončit");
@@ -658,7 +766,7 @@ void MainWindow::on_action_e_tina_triggered()
 void MainWindow::on_actionAngli_tina_triggered()
 {
     ui->action_e_tina->setChecked(false);
-    ui->label->setText("Memory");
+    ui->label->setText("Calculation process");
     ui->actionN_pov_da->setText("Help");
     ui->actionTextiik->setText("About");
     ui->exit->setText("Exit");
