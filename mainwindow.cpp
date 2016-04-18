@@ -392,9 +392,9 @@ void MainWindow::calculating()
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
     check_result=true;
-    if( !std::isnan(A) && !std::isinf(A) )
+    if( !isnan(A) && !isinf(A) )
     check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
-    if( !std::isnan(A) && !std::isinf(A) )
+    if( !isnan(A) && !isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
