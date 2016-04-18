@@ -23,8 +23,12 @@ public:
                                //unsigned ??
         double n_power(double a,double n);
 
-//      double square(double a);
+        double modulo(double a, double b); // TODO double double
         double fact(double a);
+
+        double logaritmus_ln(double x);
+        int CF_ITER(double x, double eps); // pomocna funkcia
+        double cfrac_log(double x, unsigned int n); // pomocna funkcia
 
 };
 

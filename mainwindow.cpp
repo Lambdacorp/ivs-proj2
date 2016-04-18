@@ -34,7 +34,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+//############ Globalne premenne ###############//
 /**
 * @brief num
 */
@@ -45,20 +45,18 @@ QString num = "0";
 */
 double valueA=0;
 
-//double valueB=0;
-
-
-
-char operations='0';
+char operations='0'; // + - * / % ^ =
 bool check_bodka=false;// ak sa bodka vymaze ..
-bool check_result=false;
+bool check_result=false; // TODO delete it
 
-QString textik = "0";
+QString textik = "0"; //
+//############################################### //
 
 matematics M;
 
 
 void MainWindow::check_input_zero()
+// pomocna funkcia sluzi na kontrolovanie nuly pri stlaceni tlacidla
 {
     if (num == "0")
     {
@@ -77,6 +75,7 @@ void MainWindow::check_input_zero()
     }
 }
 
+// ############## Zaciatok Tlacidla 0-9 ##################//
 void MainWindow::on_pushButton_1_clicked()
 {
     check_input_zero();
@@ -151,7 +150,9 @@ void MainWindow::on_pushButton_0_clicked()
 
     }
 }
+// ############## Koniec Tlacidla 0-9 ##################//
 
+// ############## Zaciatok Tlacidla '.', 'del', 'C'##################//
 void MainWindow::on_pushButton_bodka_clicked()
 {
     if (!check_bodka)
@@ -232,8 +233,10 @@ void MainWindow::on_pushButton_delete_clicked()
             ui->label->setText(textik);
         }
     }
-    //TODO
+    //TODO EROR delete 2. operacia
 }
+// ############## Koniec Tlacidla '.', 'del', 'C'##################//
+
 
 //###########################################
 void MainWindow::calculating()
@@ -261,6 +264,10 @@ void MainWindow::calculating()
                 valueA=M.multiple(valueA,helpB);
                 check_and_print(valueA);
                 break;
+            case '%' :
+                valueA=M.modulo(valueA,helpB);
+                check_and_print(valueA);
+                break;
 
             case '^' :
                 valueA=M.n_power(valueA,helpB);
@@ -276,13 +283,13 @@ void MainWindow::calculating()
 }
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
-    check_result=true;
+    check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
     if( !std::isnan(A) && !std::isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
-        textik.append(" = ");
-        textik.append(num);
+        textik.append(" = ");                   //TODO somarina prepisujem si potom ' = ' za + ale funguje to dobre :)
+        textik.append(num);                                                          // optimalizovat ked bude cas
         ui->label->setText(textik);
         textik=num;
 
@@ -319,7 +326,10 @@ void MainWindow::print_help_text(char sign)
         }
 
 }
-void MainWindow::on_pushButton_plus_clicked() //ok TODO
+
+// ############## Zaciatok Tlacidla matematickych operacii ##################//
+//                        + - * / % ^ ^n ! ln =                              //
+void MainWindow::on_pushButton_plus_clicked() //ok
 {
     calculating();
     operations='+';
@@ -334,7 +344,6 @@ void MainWindow::on_pushButton_minus_clicked()//ok
     operations='-';
     print_help_text(operations);
     check_result=false;
-    check_result=false;
 }
 
 
@@ -345,7 +354,6 @@ void MainWindow::on_pushButton_div_clicked()//ok
     operations='/';
     print_help_text(operations);
     check_result=false;
-    check_result=false;
 }
 
 void MainWindow::on_pushButton_multiple_clicked()//ok
@@ -354,21 +362,31 @@ void MainWindow::on_pushButton_multiple_clicked()//ok
     operations='*';
     print_help_text(operations);
     check_result=false;
+}
+//##############################################################################sqrt -rename modulo
+void MainWindow::on_pushButton_sqrtt_clicked()//ok - funguje TODO MODULO
+{
+    calculating();
+    operations='%';
+    print_help_text(operations);
     check_result=false;
 }
-
 
 void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
     calculating();
-
     num="";
-
     operations='=';
     check_result=false;
 }
 
-
+void MainWindow::on_pushButton_nty_clicked()//ok
+{
+    calculating();
+    operations='^';
+    print_help_text(operations);
+    check_result=false;
+}
 
 
 void MainWindow::on_pushButton_power_clicked() //ok
@@ -396,18 +414,44 @@ void MainWindow::on_pushButton_power_clicked() //ok
 
         check_and_print(valueA);
     }
+    num="";
+    check_bodka=false;
+}
 
 
+void MainWindow::on_pushButton_not_clicked() //TODO ln LOGARITHM
+{
+    calculating();
+    double helpB=0;
 
+    if (num == "")
+    {
+        textik=QString("%1").arg(valueA, 0, 'g', 10);
+        textik.prepend("ln ");
+
+        valueA= M.logaritmus_ln(valueA);
+
+        check_and_print(valueA);
+    }
+    else
+    {
+        helpB=num.toDouble();
+
+        textik=QString("%1").arg(helpB, 0, 'g', 10);
+        textik.prepend("ln ");
+
+        valueA= M.logaritmus_ln(helpB);
+
+        check_and_print(valueA);
+    }
     num="";
     check_bodka=false;
 }
 
 
 
-
-
-void MainWindow::on_pushButton_sqrtt_clicked()
+/*
+void MainWindow:: // TODO delete it
 {
     calculating();
 
@@ -429,6 +473,7 @@ void MainWindow::on_pushButton_sqrtt_clicked()
     num="";
     check_bodka=false;
 }
+*/
 
 void MainWindow::on_pushButton_factorial_clicked()//ok
 {
@@ -461,28 +506,11 @@ void MainWindow::on_pushButton_factorial_clicked()//ok
 }
 
 
-
-void MainWindow::on_pushButton_nty_clicked()//ok
-{
-    calculating();
-
-    calculating();
-    operations='^';
-    print_help_text(operations);
-    check_result=false;
-
-}
+// ############## Koniec Tlacidla matematickych operacii ##################//
 
 
-
-
-
-void MainWindow::on_exit_triggered()
-{
-    qApp->quit();
-}
-
-//TODO prerobit nefunguje dobre
+//TODO prerobit nefunguje dobre alebo zmazat
+/*
 void MainWindow::on_pushButton_not_clicked()
 {
         if( num.at(num.length()-1) == '.' )
@@ -515,7 +543,14 @@ void MainWindow::on_pushButton_not_clicked()
     }
 
 }
+*/
 
+// ############## Zaciatok interakcia GUI ##################//
+
+void MainWindow::on_exit_triggered()
+{
+    qApp->quit();
+}
 
 void MainWindow::on_actionBlack_and_white_triggered()
 {
