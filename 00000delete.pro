@@ -16,18 +16,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     matematics.cpp \
     about.cpp \
-    helpwindow.cpp \
-    help.cpp
+    helpwindow.cpp
 
 HEADERS  += mainwindow.h \
     matematics.h \
     about.h \
-    helpwindow.h \
-    help.h
+    helpwindow.h
 
 FORMS    += mainwindow.ui \
     about.ui \
-    helpwindow.ui \
-    help.ui
+    helpwindow.ui
 
 RESOURCES += images.qrc
