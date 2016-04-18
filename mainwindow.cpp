@@ -303,13 +303,14 @@ void MainWindow::on_pushButton_clear_clicked()
     valueA=0;
 
     operations='0';
-    //rez.
+    check_bodka=false;
 
 }
 
 void MainWindow::on_pushButton_delete_clicked()
 {
     int index= num.length()-1;
+    check_bodka=false;
 
 
     if (index<=0)
@@ -413,7 +414,6 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
 
 void MainWindow::print_help_text(char sign)
 {
-    //if(!check_result)
 
         QString znamienko="  ";
         znamienko.insert(1,sign);
@@ -432,6 +432,7 @@ void MainWindow::print_help_text(char sign)
             textik.append(znamienko);
             ui->label->setText(textik);
         }
+        check_bodka=false;
 
 }
 
@@ -486,6 +487,7 @@ void MainWindow::on_pushButton_result_clicked() // TODO 2*=
     num="";
     //operations='=';
     check_result=false;
+    check_bodka=false;
 }
 
 void MainWindow::on_pushButton_nty_clicked()//ok
