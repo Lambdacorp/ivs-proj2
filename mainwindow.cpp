@@ -1,7 +1,14 @@
 /**
 * @file mainwindow.cpp
-*
+* @version
+* @author
+* @date
+* @author{}
 * @brief
+* @
+* @warning
+* @bug
+* @copyright GNU Public License.
 * @author Lambdacorp
 * In this file there are
 */
@@ -27,7 +34,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+//############ Globalne premenne ###############//
 /**
 * @brief num
 */
@@ -38,23 +45,18 @@ QString num = "0";
 */
 double valueA=0;
 
-//double valueB=0;
-
-
-bool check_plus=false;
-bool check_minus=false;
-bool check_div=false;
-bool check_nty=false;
-bool check_multiple=false;
+char operations='0'; // + - * / % ^ =
 bool check_bodka=false;// ak sa bodka vymaze ..
-bool check_result=false;
+bool check_result=false; // TODO delete it
 
-QString textik = "0";
+QString textik = "0"; //
+//############################################### //
 
 matematics M;
 
 
 void MainWindow::check_input_zero()
+// pomocna funkcia sluzi na kontrolovanie nuly pri stlaceni tlacidla
 {
     if (num == "0")
     {
@@ -73,6 +75,7 @@ void MainWindow::check_input_zero()
     }
 }
 
+// ############## Zaciatok Tlacidla 0-9 ##################//
 void MainWindow::on_pushButton_1_clicked()
 {
     check_input_zero();
@@ -147,7 +150,9 @@ void MainWindow::on_pushButton_0_clicked()
 
     }
 }
+// ############## Koniec Tlacidla 0-9 ##################//
 
+// ############## Zaciatok Tlacidla '.', 'del', 'C'##################//
 void MainWindow::on_pushButton_bodka_clicked()
 {
     if (!check_bodka)
@@ -156,13 +161,26 @@ void MainWindow::on_pushButton_bodka_clicked()
         {
             num="0.";
             ui->lcdNumber->display(num);
+
+            if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            {
+                textik="0.";
+            }
+            else
+            {
+                textik.append("0.");
+            }
+
+            ui->label->setText(textik);
         }
         else if( num.length() < 9)
         {
             num= num+".";
             ui->lcdNumber->display(num);
-        }
 
+            textik.append(".");
+            ui->label->setText(textik);
+        }
         check_bodka=true;
     }
 
@@ -177,12 +195,9 @@ void MainWindow::on_pushButton_clear_clicked()
     ui->lcdNumber->display(num);
     valueA=0;
 
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    operations='0';
+    //rez.
+
 }
 
 void MainWindow::on_pushButton_delete_clicked()
@@ -218,73 +233,71 @@ void MainWindow::on_pushButton_delete_clicked()
             ui->label->setText(textik);
         }
     }
+    //TODO EROR delete 2. operacia
 }
+// ############## Koniec Tlacidla '.', 'del', 'C'##################//
+
 
 //###########################################
-void MainWindow::aaa() // tODO rename ... case
+void MainWindow::calculating()
 {
-
-
     if(num != "")
     {
+        double helpB=0;
+        helpB=num.toDouble();
+
+        switch( operations )
         {
-            double helpB=0;
-            helpB=num.toDouble();
-
-            if (check_plus)
-            {
+            case '+' :
                 valueA= M.plus(valueA, helpB);
-
                 check_and_print(valueA);
-
-            }
-
-            if (check_minus)
-            {
+                break;
+            case '-' :
                 valueA= M.minus(valueA, helpB);
-
                 check_and_print(valueA);
-            }
-
-            if (check_div)
-            {
+                break;
+            case '/' :
                 valueA= M.div(valueA,helpB);
-
                 check_and_print(valueA);
-            }
-
-            if (check_multiple)
-            {
+                break;
+            case '*' :
                 valueA=M.multiple(valueA,helpB);
-
                 check_and_print(valueA);
-            }
+                break;
+            case '%' :
+                valueA=M.modulo(valueA,helpB);
+                check_and_print(valueA);
+                break;
 
-            if (check_nty)
-            {
+            case '^' :
                 valueA=M.n_power(valueA,helpB);
-
                 check_and_print(valueA);
-            }
+                break;
+
+            default:
+                break;
         }
-
-
         valueA=num.toDouble();
         num="";
     }
 }
-
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
+<<<<<<< HEAD
     check_result=true;
     if( !isnan(A) && !isinf(A) )
+=======
+    check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
+    if( !std::isnan(A) && !std::isinf(A) )
+>>>>>>> master
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
-        textik.append(" = ");
-        textik.append(num);
+        textik.append(" = ");                   //TODO somarina prepisujem si potom ' = ' za + ale funguje to dobre :)
+        textik.append(num);                                                          // optimalizovat ked bude cas
         ui->label->setText(textik);
         textik=num;
+
     }
     else
     {
@@ -295,18 +308,20 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
     }
 }
 
-void MainWindow::on_pushButton_plus_clicked() //ok TODO
+void MainWindow::print_help_text(char sign)
 {
-                                         //############################################
-    if(!check_result)
-    {
-        QString znamienko=" + ";
+    //if(!check_result)
+
+        QString znamienko="  ";
+        znamienko.insert(1,sign);
+
         int help=textik.length();
-        if ( help==0)
-            textik.append("0");
+
+        //if ( help==0)
+          //  textik.append("0");
         if ( textik[help-1] == ' ')
         {
-            textik.replace(help-3,3,znamienko);
+            textik.replace(help-2,1,sign);
             ui->label->setText(textik);
         }
         else
@@ -314,43 +329,25 @@ void MainWindow::on_pushButton_plus_clicked() //ok TODO
             textik.append(znamienko);
             ui->label->setText(textik);
         }
-    }
 
-    aaa();
+}
 
-    check_plus=true;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+// ############## Zaciatok Tlacidla matematickych operacii ##################//
+//                        + - * / % ^ ^n ! ln =                              //
+void MainWindow::on_pushButton_plus_clicked() //ok
+{
+    calculating();
+    operations='+';
+    print_help_text(operations);
     check_result=false;
 }
 
 
 void MainWindow::on_pushButton_minus_clicked()//ok
 {
-    aaa();
-
-    QString znamienko=" - ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=true;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    calculating();
+    operations='-';
+    print_help_text(operations);
     check_result=false;
 }
 
@@ -358,78 +355,48 @@ void MainWindow::on_pushButton_minus_clicked()//ok
 
 void MainWindow::on_pushButton_div_clicked()//ok
 {
-    aaa();
-
-    QString znamienko=" / ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=true;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    calculating();
+    operations='/';
+    print_help_text(operations);
     check_result=false;
 }
 
 void MainWindow::on_pushButton_multiple_clicked()//ok
 {
-    aaa();
-    QString znamienko=" * ";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=true;
+    calculating();
+    operations='*';
+    print_help_text(operations);
     check_result=false;
 }
-
+//##############################################################################sqrt -rename modulo
+void MainWindow::on_pushButton_sqrtt_clicked()//ok - funguje TODO MODULO
+{
+    calculating();
+    operations='%';
+    print_help_text(operations);
+    check_result=false;
+}
 
 void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
-    aaa();
-
+    calculating();
     num="";
-
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=false;
-    check_multiple=false;
+    operations='=';
     check_result=false;
 }
 
-
+void MainWindow::on_pushButton_nty_clicked()//ok
+{
+    calculating();
+    operations='^';
+    print_help_text(operations);
+    check_result=false;
+}
 
 
 void MainWindow::on_pushButton_power_clicked() //ok
 {
-//    aaa();
-
+    calculating();
     double helpB=0;
 
     if (num == "")
@@ -452,20 +419,46 @@ void MainWindow::on_pushButton_power_clicked() //ok
 
         check_and_print(valueA);
     }
+    num="";
+    check_bodka=false;
+}
 
 
+void MainWindow::on_pushButton_not_clicked() //TODO ln LOGARITHM
+{
+    calculating();
+    double helpB=0;
 
+    if (num == "")
+    {
+        textik=QString("%1").arg(valueA, 0, 'g', 10);
+        textik.prepend("ln ");
+
+        valueA= M.logaritmus_ln(valueA);
+
+        check_and_print(valueA);
+    }
+    else
+    {
+        helpB=num.toDouble();
+
+        textik=QString("%1").arg(helpB, 0, 'g', 10);
+        textik.prepend("ln ");
+
+        valueA= M.logaritmus_ln(helpB);
+
+        check_and_print(valueA);
+    }
     num="";
     check_bodka=false;
 }
 
 
 
-
-
-void MainWindow::on_pushButton_sqrtt_clicked()
+/*
+void MainWindow:: // TODO delete it
 {
-//    aaa();
+    calculating();
 
     double helpB=0;
     if (num == "")
@@ -485,12 +478,13 @@ void MainWindow::on_pushButton_sqrtt_clicked()
     num="";
     check_bodka=false;
 }
+*/
 
 void MainWindow::on_pushButton_factorial_clicked()//ok
 {
     double helpB=0;
 
-//    aaa();
+    calculating();
 
     if (num == "" )
     {
@@ -517,44 +511,11 @@ void MainWindow::on_pushButton_factorial_clicked()//ok
 }
 
 
-
-void MainWindow::on_pushButton_nty_clicked()//ok
-{
-    aaa();
-
-    QString znamienko=" ^";
-    int help=textik.length();
-    if (textik[help-1] == ' ')
-    {
-        textik.replace(help-3,3,znamienko);
-        ui->label->setText(textik);
-    }
-    else
-    {
-        textik.append(znamienko);
-        ui->label->setText(textik);
-    }
-
-    check_plus=false;
-    check_minus=false;
-    check_div=false;
-    check_bodka=false;
-    check_nty=true;
-    check_multiple=false;
-    check_result=false;
-
-}
+// ############## Koniec Tlacidla matematickych operacii ##################//
 
 
-
-
-
-void MainWindow::on_exit_triggered()
-{
-    qApp->quit();
-}
-
-//TODO prerobit nefunguje dobre
+//TODO prerobit nefunguje dobre alebo zmazat
+/*
 void MainWindow::on_pushButton_not_clicked()
 {
         if( num.at(num.length()-1) == '.' )
@@ -587,7 +548,14 @@ void MainWindow::on_pushButton_not_clicked()
     }
 
 }
+*/
 
+// ############## Zaciatok interakcia GUI ##################//
+
+void MainWindow::on_exit_triggered()
+{
+    qApp->quit();
+}
 
 void MainWindow::on_actionBlack_and_white_triggered()
 {

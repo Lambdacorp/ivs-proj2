@@ -21,9 +21,10 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    void aaa();
+    void calculating();
     void check_and_print(double A);
     void check_input_zero();
+    void print_help_text(char sign);
     ~MainWindow();
 
 
