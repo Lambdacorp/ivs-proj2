@@ -1,3 +1,11 @@
+/**
+* @file matematics.h
+*
+* @brief Header file for aritmethic functions
+* @author Lambdacorp
+* In this file there are prototypes for arithmethic functions used in the calculator.
+*/
+
 #ifndef MATEMATICS_H
 #define MATEMATICS_H
 
