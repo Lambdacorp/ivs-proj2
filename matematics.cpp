@@ -161,6 +161,8 @@ double matematics::logaritmus_ln(double x) //TODO testy urobit pre to
         return NAN;
     else if (x == 0)
         return INFINITY;
+    else if (x == 1)
+        return 0;
     else
     {
 
