@@ -1,5 +1,5 @@
 #include "matematics.h"
-//#include <math.h>
+#include <math.h>
 
 #define my_MAX 9999999999+1
 #define my_MIN -9999999999-1
