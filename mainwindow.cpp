@@ -376,7 +376,7 @@ void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
     calculating();
     num="";
-    operations='=';
+    //operations='=';
     check_result=false;
 }
 
