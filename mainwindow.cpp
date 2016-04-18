@@ -131,6 +131,113 @@ void MainWindow::on_pushButton_3_clicked()
 
 }
 
+void MainWindow::on_pushButton_4_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"4";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("4");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"5";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("5");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"6";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("6");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"7";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("7");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"8";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("8");
+        ui->label->setText(textik);
+
+    }
+}
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    check_input_zero();
+
+    if( num.length() <= 9)
+    {
+        num= num+"9";
+        ui->lcdNumber->display(num);
+
+        if (textik == QString("%1").arg(valueA, 0, 'g', 10))
+            textik="";
+
+        textik.append("9");
+        ui->label->setText(textik);
+
+    }
+}
 
 void MainWindow::on_pushButton_0_clicked()
 {
@@ -283,16 +390,10 @@ void MainWindow::calculating()
 }
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     check_result=true;
     if( !isnan(A) && !isinf(A) )
-=======
-=======
->>>>>>> master
     check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
-    if( !std::isnan(A) && !std::isinf(A) )
->>>>>>> master
+    if( !isnan(A) && !isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
@@ -300,7 +401,6 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
         textik.append(num);                                                          // optimalizovat ked bude cas
         ui->label->setText(textik);
         textik=num;
-
     }
     else
     {
