@@ -303,13 +303,14 @@ void MainWindow::on_pushButton_clear_clicked()
     valueA=0;
 
     operations='0';
-    //rez.
+    check_bodka=false;
 
 }
 
 void MainWindow::on_pushButton_delete_clicked()
 {
     int index= num.length()-1;
+    check_bodka=false;
 
 
     if (index<=0)
@@ -391,9 +392,9 @@ void MainWindow::calculating()
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
     check_result=true;
-    if( !isnan(A) && !isinf(A) )
+    if( !std::isnan(A) && !std::isinf(A) )
     check_result=true;// TODO zbytocna premenna zatial vsade vymazat ked sa nevyuzije testovat chyby uvidi sa
-    if( !isnan(A) && !isinf(A) )
+    if( !std::isnan(A) && !std::isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
@@ -413,7 +414,6 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
 
 void MainWindow::print_help_text(char sign)
 {
-    //if(!check_result)
 
         QString znamienko="  ";
         znamienko.insert(1,sign);
@@ -432,6 +432,7 @@ void MainWindow::print_help_text(char sign)
             textik.append(znamienko);
             ui->label->setText(textik);
         }
+        check_bodka=false;
 
 }
 
@@ -484,8 +485,9 @@ void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
     calculating();
     num="";
-    operations='=';
+    //operations='=';
     check_result=false;
+    check_bodka=false;
 }
 
 void MainWindow::on_pushButton_nty_clicked()//ok
@@ -748,7 +750,7 @@ void MainWindow::on_actionOriginal_triggered()
 void MainWindow::on_action_e_tina_triggered()
 {
     ui->actionAngli_tina->setChecked(false);
-    ui->label->setText("Paměť");
+    ui->label->setText("Průběh výpočtu");
     ui->actionN_pov_da->setText("Nápověda");
     ui->actionTextiik->setText("O kalkulačce");
     ui->exit->setText("Ukončit");
@@ -764,7 +766,7 @@ void MainWindow::on_action_e_tina_triggered()
 void MainWindow::on_actionAngli_tina_triggered()
 {
     ui->action_e_tina->setChecked(false);
-    ui->label->setText("Memory");
+    ui->label->setText("Calculation process");
     ui->actionN_pov_da->setText("Help");
     ui->actionTextiik->setText("About");
     ui->exit->setText("Exit");
