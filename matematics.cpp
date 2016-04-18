@@ -7,7 +7,7 @@
 */
 
 #include "matematics.h"
-//#include <math.h>
+#include <math.h>
 
 #define my_MAX 9999999999+1 /**< Maximum that can the calculator display */
 #define my_MIN -9999999999-1 /**< Minimum that can the calculator display */

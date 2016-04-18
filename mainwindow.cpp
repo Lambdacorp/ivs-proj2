@@ -277,7 +277,7 @@ void MainWindow::aaa() // tODO rename ... case
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
     check_result=true;
-    if( !std::isnan(A) && !std::isinf(A) )
+    if( !isnan(A) && !isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
