@@ -105,7 +105,12 @@ double matematics::n_power(double a, double b)
 
     return (result < my_MAX && result > my_MIN ) ? result : NAN;
 }
-
+/** TODO
+ * @brief matematics::modulo
+ * @param a
+ * @param b
+ * @return
+ */
 double matematics::modulo(double a, double b) // TODO problem double a double | vlastne modulo urobit div int * - compare 'a' = result ==ok?
 {
     double result=0;
@@ -153,7 +158,11 @@ return (result < my_MAX ) ? result : NAN;
 }
 
 
-
+/** TODO
+ * @brief matematics::logaritmus_ln
+ * @param x
+ * @return
+ */
 double matematics::logaritmus_ln(double x) //TODO testy urobit pre to
 {
     double result;
@@ -180,7 +189,6 @@ double matematics::logaritmus_ln(double x) //TODO testy urobit pre to
 //TODO upravit odsadenie textu (je to nakopirovane )
 
 /**
- * @class matematics
  * @brief ... // pomocna funkcia na vypocet poctu iteracii (pomocou puleni intervalu) ...
  * @param x
  * @param eps
@@ -250,7 +258,6 @@ int matematics::CF_ITER(double x, double eps)
   return n;
 }
 /**
- * @class matematics
  * @brief matematics::cfrac_log
  * @param x
  * @param n
