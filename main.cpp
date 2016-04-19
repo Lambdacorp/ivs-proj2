@@ -1,4 +1,5 @@
 /**
+*  @mainpage Vitajte na stránke Dokumentácie projekt 2 - Kalkulacka.
 * @file main.cpp
 *
 * @brief Main file

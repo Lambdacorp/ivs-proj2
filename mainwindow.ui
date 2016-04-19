@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Lambdacorp</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="enabled">
@@ -35,9 +35,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>0</y>
-      <width>271</width>
+      <width>281</width>
       <height>81</height>
      </rect>
     </property>
@@ -795,7 +795,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
       <rect>
        <x>250</x>
        <y>80</y>
-       <width>41</width>
+       <width>51</width>
        <height>21</height>
       </rect>
      </property>
@@ -1431,7 +1431,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
       <rect>
        <x>20</x>
        <y>0</y>
-       <width>221</width>
+       <width>281</width>
        <height>31</height>
       </rect>
      </property>
@@ -1516,7 +1516,7 @@ color: rgb(74, 74, 74);
      <x>0</x>
      <y>0</y>
      <width>301</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1576,7 +1576,7 @@ color: rgb(206, 206, 206);</string>
      </property>
      <property name="icon">
       <iconset resource="images.qrc">
-       <normaloff>:/new/prefix1/color.png</normaloff>:/new/prefix1/color.png</iconset>
+       <normaloff>:/new/prefix1/images/color.png</normaloff>:/new/prefix1/images/color.png</iconset>
      </property>
      <addaction name="actionOriginal"/>
      <addaction name="actionBlack_and_white"/>
@@ -1587,7 +1587,7 @@ color: rgb(206, 206, 206);</string>
      </property>
      <property name="icon">
       <iconset resource="images.qrc">
-       <normaloff>:/new/prefix1/cze.png</normaloff>:/new/prefix1/cze.png</iconset>
+       <normaloff>:/new/prefix1/images/cze.png</normaloff>:/new/prefix1/images/cze.png</iconset>
      </property>
      <addaction name="actionAngli_tina"/>
      <addaction name="action_e_tina"/>
@@ -1606,7 +1606,7 @@ color: rgb(206, 206, 206);</string>
   <action name="actionTextiik">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/new/prefix1/info.png</normaloff>:/new/prefix1/info.png</iconset>
+     <normaloff>:/new/prefix1/images/info.png</normaloff>:/new/prefix1/images/info.png</iconset>
    </property>
    <property name="text">
     <string>O kalkulačce</string>
@@ -1654,7 +1654,7 @@ color: rgb(206, 206, 206);</string>
   <action name="exit">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/new/prefix1/exit.png</normaloff>:/new/prefix1/exit.png</iconset>
+     <normaloff>:/new/prefix1/images/exit.png</normaloff>:/new/prefix1/images/exit.png</iconset>
    </property>
    <property name="text">
     <string>Ukončit</string>
@@ -1669,7 +1669,7 @@ color: rgb(206, 206, 206);</string>
   <action name="actionN_pov_da">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/new/prefix1/help.png</normaloff>:/new/prefix1/help.png</iconset>
+     <normaloff>:/new/prefix1/images/help.png</normaloff>:/new/prefix1/images/help.png</iconset>
    </property>
    <property name="text">
     <string>Nápověda</string>
@@ -1684,7 +1684,7 @@ color: rgb(206, 206, 206);</string>
   <action name="action_C_Lambacorp">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/new/prefix1/lambdacorp.png</normaloff>:/new/prefix1/lambdacorp.png</iconset>
+     <normaloff>:/new/prefix1/images/lambdacorp.png</normaloff>:/new/prefix1/images/lambdacorp.png</iconset>
    </property>
    <property name="text">
     <string>By Lambdacorp</string>
