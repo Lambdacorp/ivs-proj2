@@ -10,7 +10,6 @@
 */
 
 #include "matematics.h"
-#include <math.h> //potrebne pre NAN a INF - detekcia chybovych stavov
 
 
 /**

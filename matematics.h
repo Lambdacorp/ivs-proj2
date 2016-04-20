@@ -12,10 +12,11 @@
 #ifndef MATEMATICS_H
 #define MATEMATICS_H
 
-
+#include <math.h> //potrebne pre NAN a INF - detekcia chybovych stavov
 class matematics
 {
 public:
+
         double plus(double a, double b);
         double minus(double a, double b);
 

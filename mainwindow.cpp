@@ -7,13 +7,7 @@
 */
 
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <string.h>
-#include <QString>
-#include "matematics.h"
-#include <math.h> // NAN,INF
-#include "about.h"
-#include "helpwindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -488,7 +482,7 @@ void MainWindow::on_pushButton_delete_clicked()
 
 //###########################################
 /**
-* @brief Function
+* @brief Function...
 */
 void MainWindow::calculating()
 {
@@ -502,9 +496,6 @@ void MainWindow::calculating()
     }
     if(num != "")
     {
-        /**
-         * @brief pomocna premenna
-         */
         double helpB=0;
         helpB=num.toDouble();
 
@@ -549,14 +540,14 @@ void MainWindow::calculating()
 }
 
 /**
-* @brief Funkcia TODO
-* @param A
+* @brief Funkcia kontroluje vysledky - chybove stavy a vypisuje ich
+* @param A vyledok vypoctu - kontrolovana hodota
 */
 void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cisla
 {
+    using namespace std;
 
-
-    if( !std::isnan(A) && !std::isinf(A) )
+    if( !isnan(A) && !isinf(A) )
     {
         num=QString("%1").arg(A, 0, 'g', 10);
         ui->lcdNumber->display(num);
@@ -565,18 +556,32 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
         ui->label->setText(textik);
         textik=num;
     }
-    else
+    else if( isinf(A) )
     {
         ui->lcdNumber->display("Err");
         valueA=0;
-        ui->label->setText("Err");
         textik="0";
+        if( ui->action_e_tina->isChecked() )
+            ui->label->setText(" dělení nulou ");
+        else
+            ui->label->setText(" division by zero ");
+
+    }
+    else if( isnan(A) )
+    {
+        ui->lcdNumber->display("Err");
+        valueA=0;
+        textik="0";
+        if( ui->action_e_tina->isChecked() )
+            ui->label->setText(" mimo rozsah ");
+        else
+            ui->label->setText(" out of range ");
     }
 }
 
 /**
-* @brief Funkcia TODO
-* @param sign
+* @brief Funkcia dostane znamienko a vypisuje ho do pomocneho vypoctu
+* @param sign - znamienko operacie
 */
 void MainWindow::print_help_text(char sign)
 {
@@ -602,7 +607,10 @@ void MainWindow::print_help_text(char sign)
 }
 
 // ############## Zaciatok Tlacidla matematickych operacii ##################//
-//                        + - * / % ^ ^n ! ln =                              //
+//                        + - * / % ^ ^n ! ln =
+/**
+ * @brief scitanie
+ */
 void MainWindow::on_pushButton_plus_clicked() //ok
 {
     calculating();
@@ -610,8 +618,9 @@ void MainWindow::on_pushButton_plus_clicked() //ok
     print_help_text(operations);
 
 }
-
-
+/**
+ * @brief odcitanie
+ */
 void MainWindow::on_pushButton_minus_clicked()//ok
 {
     calculating();
@@ -619,9 +628,9 @@ void MainWindow::on_pushButton_minus_clicked()//ok
     print_help_text(operations);
 
 }
-
-
-
+/**
+ * @brief delenie
+ */
 void MainWindow::on_pushButton_div_clicked()//ok
 {
     calculating();
@@ -629,7 +638,9 @@ void MainWindow::on_pushButton_div_clicked()//ok
     print_help_text(operations);
 
 }
-
+/**
+ * @brief nasobenie
+ */
 void MainWindow::on_pushButton_multiple_clicked()//ok
 {
     calculating();
@@ -637,15 +648,19 @@ void MainWindow::on_pushButton_multiple_clicked()//ok
     print_help_text(operations);
 
 }
-//##############################################################################sqrt -rename modulo
-void MainWindow::on_pushButton_mod_clicked()//ok - funguje TODO MODULO
+/**
+ * @brief modulo
+ */
+void MainWindow::on_pushButton_mod_clicked()//ok
 {
     calculating();
     operations='%';
     print_help_text(operations);
 
 }
-
+/**
+ * @brief vysledok
+ */
 void MainWindow::on_pushButton_result_clicked() // TODO 2*=
 {
     if (textik.length()>0)
@@ -666,6 +681,9 @@ void MainWindow::on_pushButton_result_clicked() // TODO 2*=
     check_bodka=false;
 }
 
+/**
+ * @brief druha mocnina ^2
+ */
 void MainWindow::on_pushButton_nty_clicked()//ok
 {
     calculating();
@@ -674,7 +692,9 @@ void MainWindow::on_pushButton_nty_clicked()//ok
 
 }
 
-
+/**
+ * @brief n-ta mocnina ^n
+ */
 void MainWindow::on_pushButton_power_clicked() //ok
 {
     calculating();
@@ -700,11 +720,14 @@ void MainWindow::on_pushButton_power_clicked() //ok
 
         check_and_print(valueA);
     }
+    operations= '=';//TODO SKUSKA ok ?
     num="";
     check_bodka=false;
 }
 
-
+/**
+ * @brief ln - prirodzeny logaritmus
+ */
 void MainWindow::on_pushButton_ln_clicked()
 {
     calculating();
@@ -730,37 +753,14 @@ void MainWindow::on_pushButton_ln_clicked()
 
         check_and_print(valueA);
     }
+    operations= '=';//TODO SKUSKA ok ?
     num="";
     check_bodka=false;
 }
 
-
-
-/*
-void MainWindow::sqrt // TODO delete it sqrt
-{
-    calculating();
-
-    double helpB=0;
-    if (num == "")
-    {
-        valueA=sqrt(valueA);
-
-        check_and_print(valueA);
-    }
-    else
-    {
-        helpB=num.toDouble();
-        valueA=sqrt(helpB);
-
-        check_and_print(valueA);
-    }
-
-    num="";
-    check_bodka=false;
-}
-*/
-
+/**
+ * @brief faktorial
+ */
 void MainWindow::on_pushButton_factorial_clicked()//ok
 {
     double helpB=0;
@@ -787,16 +787,13 @@ void MainWindow::on_pushButton_factorial_clicked()//ok
         check_and_print(valueA);
     }
 
+    operations= '=';//TODO SKUSKA ok ?
     num="";
     check_bodka=false;
 }
 
-
-// ############## Koniec Tlacidla matematickych operacii ##################//
-
-
-//TODO prerobit nefunguje dobre alebo zmazat
 /*
+//TODO prerobit nefunguje dobre alebo zmazat
 void MainWindow::on_pushButton_not_clicked()
 {
         if( num.at(num.length()-1) == '.' )
@@ -831,13 +828,52 @@ void MainWindow::on_pushButton_not_clicked()
 }
 */
 
+/*
+void MainWindow::sqrt // TODO delete it sqrt
+{
+    calculating();
+
+    double helpB=0;
+    if (num == "")
+    {
+        valueA=sqrt(valueA);
+
+        check_and_print(valueA);
+    }
+    else
+    {
+        helpB=num.toDouble();
+        valueA=sqrt(helpB);
+
+        check_and_print(valueA);
+    }
+
+    num="";
+    check_bodka=false;
+}
+*/
+
+// ############## Koniec Tlacidla matematickych operacii ##################//
+
+/**
+* @defgroup ggg GUI
+*/
+
 // ############## Zaciatok interakcia GUI ##################//
 
+/**
+ * @ingroup ggg
+ * @brief Ukonci program
+ */
 void MainWindow::on_exit_triggered()
 {
     qApp->quit();
 }
 
+/**
+ * @ingroup ggg
+ * @brief nastavi farby - biela
+ */
 void MainWindow::on_actionBlack_and_white_triggered()
 {
     ui->actionOriginal->setChecked(false);
@@ -879,6 +915,10 @@ void MainWindow::on_actionBlack_and_white_triggered()
     ui->frame_6->setStyleSheet("background-color: rgb(242, 242, 242);");
 }
 
+/**
+ * @ingroup ggg
+ * @brief nastavy farby - cierna
+ */
 void MainWindow::on_actionOriginal_triggered()
 {
     ui->actionBlack_and_white->setChecked(false);
@@ -923,6 +963,10 @@ void MainWindow::on_actionOriginal_triggered()
 
 }
 
+/**
+ * @ingroup ggg
+ * @brief nastavy jazyk - cestina
+ */
 void MainWindow::on_action_e_tina_triggered()
 {
     ui->actionAngli_tina->setChecked(false);
@@ -939,6 +983,10 @@ void MainWindow::on_action_e_tina_triggered()
     ui->setting_jazyk->setTitle("Jazyk");
 }
 
+/**
+ * @ingroup ggg
+ * @brief nastavy jazyk - English
+ */
 void MainWindow::on_actionAngli_tina_triggered()
 {
     ui->action_e_tina->setChecked(false);
@@ -955,6 +1003,10 @@ void MainWindow::on_actionAngli_tina_triggered()
     ui->setting_jazyk->setTitle("Language");
 }
 
+/**
+ * @ingroup ggg
+ * @brief MainWindow::on_actionTextiik_triggered
+ */
 void MainWindow::on_actionTextiik_triggered()
 {
     About about;
@@ -962,6 +1014,10 @@ void MainWindow::on_actionTextiik_triggered()
     about.exec();
 }
 
+/**
+ * @ingroup ggg
+ * @brief MainWindow::on_actionN_pov_da_triggered
+ */
 void MainWindow::on_actionN_pov_da_triggered()
 {
     HelpWindow help;

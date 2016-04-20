@@ -12,6 +12,15 @@
 
 #include <QMainWindow>
 
+#include <string.h>
+#include <QString>
+#include "matematics.h"
+//#include <math.h> // NAN,INF
+
+#include "ui_mainwindow.h"
+#include "about.h"
+#include "helpwindow.h"
+
 namespace Ui {
 class MainWindow;
 }
