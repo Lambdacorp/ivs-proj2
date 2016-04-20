@@ -1,3 +1,12 @@
+/**
+* @file about.h
+* @version 2.4
+* @date 19.04.2016
+* @author Lambdacorp
+* @copyright ©Lambdacorp
+* @brief header file for about window
+*/
+
 #ifndef ABOUT_H
 #define ABOUT_H
 

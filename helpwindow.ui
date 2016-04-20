@@ -6,37 +6,76 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
-    <height>350</height>
+    <width>580</width>
+    <height>420</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>580</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>580</width>
+    <height>420</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Help</string>
   </property>
   <widget class="QTextBrowser" name="textBrowser">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>551</width>
-     <height>351</height>
+     <width>580</width>
+     <height>420</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>580</width>
+     <height>420</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>580</width>
+     <height>420</height>
+    </size>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Kalkulačka by Lambda&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;corp&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;Verze: 2.0.3&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Lambdacalc by Lambda&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;corp&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Verze: 2.4&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nápověda a návod k obsluze:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;lipsum&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;L&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices est eu dolor commodo, id viverra tellus ullamcorper. Aenean sit amet sapien augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ut ullamcorper nisl, vitae ultricies ante. Sed sit amet elit sodales erat eleifend elementum. Aliquam iaculis eget massa sit amet cursus. Proin aliquet felis a dui bibendum malesuada. Fusce massa neque, faucibus vel quam a, mollis varius mi. Phasellus sit amet mollis leo. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Nunc convallis ultrices pellentesque. Donec rhoncus ipsum a tincidunt pellentesque. Nam a viverra eros. Proin tempus ultrices venenatis. Nulla eu tellus tortor. Vestibulum posuere rutrum faucibus. In suscipit cursus nisi a lacinia. Vestibulum aliquam orci metus, malesuada lobortis nisi accumsan quis. Nullam at sem elit. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Aenean elementum aliquet sapien id ultricies. Maecenas nec viverra purus, id egestas arcu. Integer gravida ex eget ex maximus pretium. Etiam accumsan at dolor vitae ullamcorper. Mauris suscipit ante non mauris rhoncus eleifend. Aliquam eu sapien non libero pharetra pellentesque accumsan ut sapien. Morbi sed nisi quam. Praesent sit amet eros ornare, pulvinar tellus non, pretium sapien. Sed varius tellus sit amet imperdiet luctus. Mauris non lacus venenatis neque mollis scelerisque egestas a eros. In hac habitasse platea dictumst. Etiam vestibulum sollicitudin erat. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Phasellus mollis sed mauris id dignissim. Proin aliquet euismod dapibus. Suspendisse eget vulputate diam, et commodo ipsum. Donec vehicula, est vel vehicula facilisis, mauris turpis sodales nunc, quis placerat eros orci a neque. Mauris molestie gravida neque. Etiam nec magna eu orci malesuada mattis sit amet a orci. Etiam euismod, lectus id suscipit congue, libero velit consectetur velit, at tincidunt velit nisi sit amet tortor. In feugiat, eros ac mollis vestibulum, massa mauris facilisis odio, eu tristique mauris ligula eget diam. Aenean consectetur eget justo vel pharetra. Sed elementum eros sit amet ante rhoncus, vel lobortis nulla luctus. Phasellus mollis tristique orci sed ultrices. Praesent vulputate mauris sed metus ultrices, congue maximus sem faucibus. Integer blandit purus eget blandit pellentesque. Proin justo dolor, gravida non neque eget, ullamcorper tristique turpis. Pellentesque quis dapibus ex, in consequat libero. Nam efficitur massa ac augue volutpat blandit. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Nullam leo ligula, volutpat et mi a, scelerisque posuere ante. Nullam ultricies aliquet est sed faucibus. Curabitur ac felis sem. Fusce a ex malesuada, efficitur justo eu, aliquet justo. Maecenas dapibus est lorem, quis sagittis libero facilisis non. Nam ut justo vitae purus egestas vestibulum. Donec euismod et lorem vel blandit. Suspendisse imperdiet ullamcorper felis sed faucibus. Ut dignissim felis vel consequat varius. Suspendisse hendrerit justo vel dolor eleifend lacinia. Curabitur egestas, enim id posuere aliquet, odio est accumsan tortor, at interdum leo augue et turpis. Sed condimentum lacus ex, id varius leo egestas quis. Sed aliquet orci eu metus ullamcorper lobortis. In lacinia velit sit amet risus volutpat, eget volutpat dui malesuada. Nunc facilisis bibendum lorem non varius. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;  &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Rozsah kalkulačky je od &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;– 9 999 999 999&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; do &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;+ 9 999 999 999&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;. Pokud výpočet překročí tuto hodnotu, LCD displej vypíše Err. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Program ukončíte pomocí kontextového menu Menu – Ukončit nebo pomocí klávesové zkratky Ctrl+W. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Informace o programu zobrazíte pomocí kontextového menu Menu – O kalkulačce nebo pomocí klávesové zkratky Ctrl+I. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Nápovědu zobrazíte pomocí kontextového menu Menu – Nápověda nebo pomocí klávesové zkratky Ctrl+H. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Pomocí kontextového menu Nastavení – Barevné schéma můžete měnit barevné schéma. Z nabídky můžete vybrat světlé či tmavé. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Pomocí kontextového menu Nastavení – Jazyk můžete měnit jazyk kalkulačky. Vybírat můžete z jazyka českého a anglického. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Tlačítko čárky vloží desetinnou čárku na konec zadaného čísla na displeji. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Červená tlačítka slouží k smazání displeje. Tlačítko DEL maže jednotlivé číslice, tlačítko C pak celé číslo. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Žluté tlačítko (rovná se) slouží pro potvrzení zadání druhého čísla u funkcí, které ho potřebují (&lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;mod, /,*,+, - a ^n&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;). &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Popis funkcí: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Kalkulačka umí standardní funkce jako je sčítání, odčítání, násobení a dělení. Řídí se matematickými zákony – př. nulou nevydělíš. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Funkce faktoriál (označená &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;! &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;) je možný pouze s kladných čísel a nuly, maximálně však z čísla 13. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Funkce modulo (označená &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;mod &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;) zobrazí zbytek po dělení. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Funkce přirozeného logaritmu (označená&lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt; ln &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;) vypočte ze zadaného čísla přirozený logaritmus s přesností 0.0000001. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Funkce druhé mocniny (označená &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;^2 &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;) vypočte ze zadaného čísla jeho násobek – umocní jej na druhou. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Funkce mocniny (označená &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;^n &lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;) po stisknutí vyžaduje zadání dalšího čísla na kterou se umocní zadané číslo. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'Calibri,sans-serif'; font-size:9pt; font-style:italic;&quot;&gt;Jakékoli dotazy a připomínky zasílejte na &lt;/span&gt;&lt;a href=&quot;help@lambdacorp.com&quot;&gt;&lt;span style=&quot; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;help@lambdacorp.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

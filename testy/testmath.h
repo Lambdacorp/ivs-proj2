@@ -1,3 +1,12 @@
+/**
+  *@file testmath.h
+  *@version 2.4
+  *@date 19.04.2016
+  *@author Lambdacorp
+  *@copyright ©Lambdacorp
+  *@brief Tests for arithmethic functions
+  */
+
 #ifndef TESTMATH_H
 #define TESTMATH_H
 
@@ -8,7 +17,14 @@ class testiik : public QObject {
     Q_OBJECT
 
 private slots:
-
+/**
+  *@def makro: horna hranica
+  */
+#define HIGH_LIMIT 9999999999
+/**
+  *@def makro: dolna hranica
+  */
+#define DOWN_LIMIT -9999999999
 
     void test_plus();
     void test_plus_zero_zero();
