@@ -1,9 +1,12 @@
 /**
-*  @mainpage Vitajte na stránke Dokumentácie projekt 2 - Kalkulacka.
+* @mainpage Welcome to page
 * @file main.cpp
-*
-* @brief Main file
+* @version 2.4
+* @date 19.04.2016
 * @author Lambdacorp
+* @copyright ©Lambdacorp
+* @brief Main file
+*
 * Main file with main function
 */
 

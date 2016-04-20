@@ -1,3 +1,12 @@
+/**
+* @file helpwindow.h
+* @version 2.4
+* @date 19.04.2016
+* @author Lambdacorp
+* @copyright ©Lambdacorp
+* @brief header file for help window
+*/
+
 #ifndef HELPWINDOW_H
 #define HELPWINDOW_H
 
