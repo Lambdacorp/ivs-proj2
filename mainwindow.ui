@@ -16,8 +16,24 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>301</width>
+    <height>432</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>301</width>
+    <height>432</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Lambdacorp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/new/prefix1/images/lambdacorp.png</normaloff>:/new/prefix1/images/lambdacorp.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="enabled">
@@ -811,6 +827,9 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
      <property name="checked">
       <bool>true</bool>
      </property>
+     <property name="autoRepeat">
+      <bool>false</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_plus">
      <property name="geometry">
@@ -1160,7 +1179,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
       <string>3</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_sqrtt">
+    <widget class="QPushButton" name="pushButton_mod">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -1345,7 +1364,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
       <string>4</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_not">
+    <widget class="QPushButton" name="pushButton_ln">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -1401,11 +1420,11 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb
     <zorder>pushButton_plus</zorder>
     <zorder>pushButton_minus</zorder>
     <zorder>pushButton_nty</zorder>
-    <zorder>pushButton_not</zorder>
+    <zorder>pushButton_ln</zorder>
     <zorder>pushButton_power</zorder>
     <zorder>pushButton_multiple</zorder>
     <zorder>pushButton_div</zorder>
-    <zorder>pushButton_sqrtt</zorder>
+    <zorder>pushButton_mod</zorder>
     <zorder>pushButton_factorial</zorder>
    </widget>
    <widget class="QFrame" name="frame_2">
@@ -1617,6 +1636,9 @@ color: rgb(206, 206, 206);</string>
    <property name="toolTip">
     <string>O kalkulačce</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
   </action>
   <action name="action_e_tina">
    <property name="checkable">
@@ -1679,6 +1701,9 @@ color: rgb(206, 206, 206);</string>
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
    </property>
   </action>
   <action name="action_C_Lambacorp">

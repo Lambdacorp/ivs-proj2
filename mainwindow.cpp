@@ -1,11 +1,8 @@
 /**
-*
 * @file mainwindow.cpp
 * @version 2.03
 * @date 19.04.2016
 * @author Lambdacorp
-* @brief TODO
-* @warning TODO
 * @copyright ©Lambdacorp
 */
 
@@ -89,17 +86,17 @@ void MainWindow::check_input_zero()
 * @defgroup Aaa Tlacidla 0-9
 *
 */
-
-
 // ############## Zaciatok Tlacidla 0-9 ##################//
 /**
-* @ingroup Aaa
-* @brief MainWindow::on_pushButton_1_clicked
-* Funkcia  po stlaceni tlacidla '1' vola pomocnu funkciu check_input_zero, skontroluje dlzku
-* retazca (obmedzenie na 10 znakov)
-* ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
-* @return void
-*/
+ * @ingroup Aaa
+ * @brief After pushing the button '1'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '1' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 1 to the string and the calculation process is displied on lcd display and label
+ */
 void MainWindow::on_pushButton_1_clicked()
 {
     check_input_zero();
@@ -117,13 +114,17 @@ void MainWindow::on_pushButton_1_clicked()
 
     }
 }
+
 /**
-* @ingroup Aaa
-* @brief MainWindow::on_pushButton_2_clicked
-* Funkcia  po stlaceni tlacidla '2' vola pomocnu funkciu check_input_zero, skontroluje dlzku
-* retazca (obmedzenie na 10 znakov)
-* ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
-*/
+ * @ingroup Aaa
+ * @brief After pushing the button '2'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '2' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 2 to the string and the calculation process is displied on lcd display and label
+ */
 void MainWindow::on_pushButton_2_clicked()
 {
     check_input_zero();
@@ -141,12 +142,16 @@ void MainWindow::on_pushButton_2_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_3_clicked
- * Funkcia  po stlaceni tlacidla '3' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '3'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '3' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 3 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_3_clicked()
 {
@@ -166,11 +171,16 @@ void MainWindow::on_pushButton_3_clicked()
     }
 
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_4_clicked Funkcia  po stlaceni tlacidla '4' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '4'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '4' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 4 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_4_clicked()
 {
@@ -189,11 +199,16 @@ void MainWindow::on_pushButton_4_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_5_clicked Funkcia  po stlaceni tlacidla '5' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '5'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '5' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 5 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_5_clicked()
 {
@@ -212,11 +227,16 @@ void MainWindow::on_pushButton_5_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_6_clicked Funkcia  po stlaceni tlacidla '6' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '6'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '6' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 6 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_6_clicked()
 {
@@ -235,11 +255,16 @@ void MainWindow::on_pushButton_6_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_7_clicked Funkcia  po stlaceni tlacidla '7' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '7'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '7' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 7 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_7_clicked()
 {
@@ -258,11 +283,16 @@ void MainWindow::on_pushButton_7_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_8_clicked Funkcia  po stlaceni tlacidla '8' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '8'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '8' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 8 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_8_clicked()
 {
@@ -281,11 +311,16 @@ void MainWindow::on_pushButton_8_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_9_clicked Funkcia  po stlaceni tlacidla '9' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '9'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '9' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 9 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_9_clicked()
 {
@@ -304,11 +339,16 @@ void MainWindow::on_pushButton_9_clicked()
 
     }
 }
+
 /**
  * @ingroup Aaa
- * @brief MainWindow::on_pushButton_0_clicked Funkcia po stlaceni tlacidla '0' vola pomocnu funkciu check_input_zero, skontroluje dlzku
- * retazca (obmedzenie na 10 znakov)
- * ak splna rozsah ulozi do retazca 1 a zobrazi na lcd display ako aj na (label)- priebeh vypoctu
+ * @brief After pushing the button '0'
+ * @pre Press the button
+ * @post Displey a number
+ *
+ * After pressing the button '0' this function calls auxiliary function check_input_zero,
+ * after that it checks the lenght of the string (which is limited to 10 characters);
+ * if this condition is fulfilled it will put 0 to the string and the calculation process is displied on lcd display and label
  */
 void MainWindow::on_pushButton_0_clicked()
 {
@@ -329,13 +369,11 @@ void MainWindow::on_pushButton_0_clicked()
     }
 }
 // ############## Koniec Tlacidla 0-9 ##################//
-
 /**
  *
  * @defgroup delC Tlacidla '.', 'del', 'C'
  *
  */
-
 // ############## Zaciatok Tlacidla '.', 'del', 'C'##################//
 /**
  * @ingroup delC
@@ -399,8 +437,7 @@ void MainWindow::on_pushButton_clear_clicked()
  * a zobrazi na lcd display ako aj na (label)-priebeh vypoctu nove upravene cislo
  * ak bolo stlacene tlacidlo '=' a potom 'del' funkcia sa chova ako 'C'- zmaze vsetko a zobrazi nulu-"0"
  * ak sa vymazala bodka zmenime zaznamename to (check_bodka)
- * @bug todo
- * @todo todo
+ * @todo todo..
  */
 void MainWindow::on_pushButton_delete_clicked()
 {
@@ -445,14 +482,13 @@ void MainWindow::on_pushButton_delete_clicked()
             ui->label->setText(textik);
         }
     }
-    //TODO EROR delete 2. operacia
 }
 // ############## Koniec Tlacidla '.', 'del', 'C'##################//
 
 
 //###########################################
 /**
-* @brief Funkcia TODO
+* @brief Function
 */
 void MainWindow::calculating()
 {
@@ -466,6 +502,9 @@ void MainWindow::calculating()
     }
     if(num != "")
     {
+        /**
+         * @brief pomocna premenna
+         */
         double helpB=0;
         helpB=num.toDouble();
 
@@ -531,7 +570,7 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
         ui->lcdNumber->display("Err");
         valueA=0;
         ui->label->setText("Err");
-        textik="";
+        textik="0";
     }
 }
 
@@ -541,25 +580,24 @@ void MainWindow::check_and_print(double A) // TODO osetrit double -desatinne cis
 */
 void MainWindow::print_help_text(char sign)
 {
+    QString znamienko="  ";
+    znamienko.insert(1,sign);
 
-        QString znamienko="  ";
-        znamienko.insert(1,sign);
-
-        int help=textik.length();
+    int help=textik.length();
 
         //if ( help==0)
           //  textik.append("0");
-        if ( textik[help-1] == ' ')
-        {
-            textik.replace(help-2,1,sign);
-            ui->label->setText(textik);
-        }
-        else
-        {
-            textik.append(znamienko);
-            ui->label->setText(textik);
-        }
-        check_bodka=false;
+    if ( textik[help-1] == ' ')
+    {
+        textik.replace(help-2,1,sign);
+        ui->label->setText(textik);
+    }
+    else
+    {
+        textik.append(znamienko);
+        ui->label->setText(textik);
+    }
+    check_bodka=false;
 
 }
 
@@ -600,7 +638,7 @@ void MainWindow::on_pushButton_multiple_clicked()//ok
 
 }
 //##############################################################################sqrt -rename modulo
-void MainWindow::on_pushButton_sqrtt_clicked()//ok - funguje TODO MODULO
+void MainWindow::on_pushButton_mod_clicked()//ok - funguje TODO MODULO
 {
     calculating();
     operations='%';
@@ -667,7 +705,7 @@ void MainWindow::on_pushButton_power_clicked() //ok
 }
 
 
-void MainWindow::on_pushButton_not_clicked() //TODO ln LOGARITHM
+void MainWindow::on_pushButton_ln_clicked()
 {
     calculating();
     double helpB=0;
@@ -822,11 +860,11 @@ void MainWindow::on_actionBlack_and_white_triggered()
     ui->pushButton_factorial->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
     ui->pushButton_minus->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
     ui->pushButton_multiple->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
-    ui->pushButton_not->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
+    ui->pushButton_ln->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
     ui->pushButton_nty->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
     ui->pushButton_plus->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
     ui->pushButton_power->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
-    ui->pushButton_sqrtt->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
+    ui->pushButton_mod->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\"; 	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(235, 235, 235));\n  color: rgb(0, 0, 0);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(205, 205, 205));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(240, 240, 240), stop:0.857955 rgb(135, 135, 135));\n }");
 
     ui->pushButton_clear->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));\n }");
     ui->pushButton_delete->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(233, 233, 233);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(233, 233, 233);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));\n }");
@@ -863,11 +901,11 @@ void MainWindow::on_actionOriginal_triggered()
     ui->pushButton_factorial->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
     ui->pushButton_minus->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
     ui->pushButton_multiple->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
-    ui->pushButton_not->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
+    ui->pushButton_ln->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
     ui->pushButton_nty->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
     ui->pushButton_plus->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
     ui->pushButton_power->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
-    ui->pushButton_sqrtt->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
+    ui->pushButton_mod->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(30, 30, 30));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(50, 50, 50));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(15, 15, 15), stop:0.857955 rgb(120, 120, 120));\n }");
 
     ui->pushButton_clear->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));\n }");
     ui->pushButton_delete->setStyleSheet("QPushButton\n{\n  border: 1px solid rgb(22, 22, 22);\n  font: 12pt \"Gill Sans MT\";	\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(107, 0, 0), stop:0.857955 rgb(130, 0, 0));\n  color: rgb(230, 230, 230);\n}\n\nQPushButton:hover\n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(140, 0, 0), stop:0.857955 rgb(190, 0, 0));\n}\n\nQPushButton:pressed \n{\n  border: 1px solid rgb(22, 22, 22);\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgb(190, 0, 0), stop:0.857955 rgb(240, 0, 0));\n }");

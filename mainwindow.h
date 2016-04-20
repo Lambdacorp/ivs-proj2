@@ -1,9 +1,10 @@
 /**
 * @file mainwindow.h
-*
-* @brief Header file for main window
+* @version 2.4
+* @date 19.04.2016
 * @author Lambdacorp
-* In this file there are
+* @copyright ©Lambdacorp
+* @brief Header file for main window
 */
 
 #ifndef MAINWINDOW_H
@@ -69,7 +70,7 @@ private slots:
 
     void on_pushButton_power_clicked();
 
-    void on_pushButton_sqrtt_clicked();
+    void on_pushButton_mod_clicked();
 
 
 
@@ -83,7 +84,7 @@ private slots:
 
     void on_pushButton_nty_clicked();
 
-    void on_pushButton_not_clicked();
+    void on_pushButton_ln_clicked();
 
     void on_pushButton_multiple_clicked();
 
